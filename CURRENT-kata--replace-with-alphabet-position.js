@@ -1,24 +1,30 @@
 function alphabetPosition(text) {
   console.log(text);
-
-  let funnel = new RegExp('[A-Z]|[a-z]')
+  text = [...text];
   let alphabet =
   [
-  "", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
-  ]
-  text = [...text];
-  let texte = text.filter(t=>{funnel.test(t)});
-  console.log(funnel.test("a"));
-  let result = ``;
+    null, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+  ];
+  function belongsToAlphabet(a)
+  {
+    for(i in alphabet)
+    {
+      if(alphabet[i] == a.toLowerCase())
+      {
+        return true;
+      };
+    };
+    return false;
+  };
+  text = text.filter(belongsToAlphabet);
+  let result = [];
   for(i in text)
   {
-    if(typeof(text[i]) == "String")
-    {
-      let cipher = alphabet.indexOf(text[i].toLowerCase());
-      result+= 1;
-    }
+    let cipher = alphabet.indexOf(text[i].toLowerCase());
+    result.push(cipher.toString());
   }
+  result = result.join(' ');
   return result;
 }
 
-console.log("RESULT: " + alphabetPosition("arg"));
+console.log("RESULT: " + alphabetPosition("The narwhal bacons at midnight"));
