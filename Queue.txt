@@ -1,0 +1,2 @@
+(A script per every password and passphrase, showing how it works)
+
