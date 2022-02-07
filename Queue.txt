@@ -1,2 +1,1 @@
-(A script per every password and passphrase, showing how it works)
-
+Optimisation of the kata "Replace-with-alphabet-position.js"
