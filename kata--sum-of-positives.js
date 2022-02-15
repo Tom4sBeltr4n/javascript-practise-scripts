@@ -1,4 +1,5 @@
 function positiveSum(arr) {
+  // https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
   console.log(arr); 
   arr = arr.filter((w)=>w>0)
   let result = 0;

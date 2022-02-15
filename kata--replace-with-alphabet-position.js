@@ -1,4 +1,5 @@
 function alphabetPosition(text) {
+  // https://www.codewars.com/kata/546f922b54af40e1e90001da/train/javascript
   console.log(text);
   text = [...text];
   let alphabet =

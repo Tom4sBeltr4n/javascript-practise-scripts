@@ -1,4 +1,5 @@
 function duplicateCount(text)
+// https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/javascript
 {
   text = [...text];
   let result = 0;
