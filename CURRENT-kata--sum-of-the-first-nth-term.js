@@ -7,16 +7,9 @@ function SeriesSum(n)
   for(;n>0;n--)
   {
     result+=1/(1+(3*(n-1)));
-    i++
-  }
-  result = (Math.round(result*100)/100).toString();
-  if(Number.isInteger(parseFloat(result)))
-  {
-    result += ".00";
-  } else if (result.length == 3)
-  {
-    result+= "0";
+    i++;
   };
+  result = result.toFixed(2).toString();
   return result;
 }
 
